@@ -1,6 +1,6 @@
 package com.andallus.transfer
 
-import com.andallus.entities.moneysociety.Account
+import simulacrum._
 
 /**
   * Created by ot on 04/11/2016.
@@ -8,20 +8,21 @@ import com.andallus.entities.moneysociety.Account
 class MoneyTransferContext {
 
 
-  import CanCredit._
-  import CanDebit._
+  import CanCredit.DestinationAccount
+  import CanDebit.SourceAccount
 
-  def apply[T,V](source: T, target: V, amount: Int)(implicit evS : SourceAccount[T], evV : DestinationAccount[V]) : (T, V) = {
+  import DestinationAccount.ops._
+  import SourceAccount.ops._
 
-    ( evS.debit(source,amount) , evV.credit(target, amount) )
-
+  def apply[T : SourceAccount ,V : DestinationAccount](source: T, target: V, amount: Int) : (T, V) = {
+    (source.debit(amount), target.credit(amount))
   }
 
 }
 
 object CanDebit {
 
-  trait SourceAccount[T] {
+  @typeclass trait SourceAccount[T] {
 
     def debit(t: T, amount: Int) : T
 
@@ -31,7 +32,7 @@ object CanDebit {
 
 object CanCredit {
 
-  trait DestinationAccount[T] {
+  @typeclass trait DestinationAccount[T] {
 
     def credit(t: T, amount: Int) : T
 
