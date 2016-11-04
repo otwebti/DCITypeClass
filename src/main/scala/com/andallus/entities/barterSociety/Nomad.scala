@@ -1,4 +1,4 @@
-package com.andallus.entities.barterSociety
+package com.andallus.entities.bartersociety
 
 /**
   * Created by ot on 04/11/2016.

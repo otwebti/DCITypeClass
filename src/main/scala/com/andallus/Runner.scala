@@ -1,6 +1,6 @@
 package com.andallus
 
-import com.andallus.transferUseCase.MoneyTransferContext
+import com.andallus.transfer.MoneyTransferContext
 
 /**
   * Created by ot on 04/11/2016.
@@ -18,9 +18,9 @@ object Runner extends App{
 class BarterSoc {
 
 
-  import com.andallus.entities.barterSociety.Nomad
+  import com.andallus.entities.bartersociety.Nomad
 
-  import com.andallus.entities.barterSociety.NomadTransfer._
+  import com.andallus.entities.bartersociety.NomadTransfer._
 
   val source = Nomad("Ahmed",100)
 
@@ -40,9 +40,9 @@ class BarterSoc {
 class MoneySoc {
 
 
-  import com.andallus.entities.moneySociety.Account
+  import com.andallus.entities.moneysociety.Account
 
-  import com.andallus.entities.moneySociety.AccountTransfer._
+  import com.andallus.entities.moneysociety.AccountTransfer._
 
   val source = Account("Source",100)
 

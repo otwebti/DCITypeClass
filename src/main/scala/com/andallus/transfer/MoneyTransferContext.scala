@@ -1,6 +1,6 @@
-package com.andallus.transferUseCase
+package com.andallus.transfer
 
-import com.andallus.entities.moneySociety.Account
+import com.andallus.entities.moneysociety.Account
 
 /**
   * Created by ot on 04/11/2016.

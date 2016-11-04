@@ -1,7 +1,7 @@
-package com.andallus.entities.moneySociety
+package com.andallus.entities.moneysociety
 
-import com.andallus.transferUseCase.CanCredit.DestinationAccount
-import com.andallus.transferUseCase.CanDebit.SourceAccount
+import com.andallus.transfer.CanCredit.DestinationAccount
+import com.andallus.transfer.CanDebit.SourceAccount
 
 /**
   * Created by ot on 04/11/2016.

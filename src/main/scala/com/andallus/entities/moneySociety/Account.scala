@@ -1,4 +1,4 @@
-package com.andallus.entities.moneySociety
+package com.andallus.entities.moneysociety
 
 /**
   * Created by ot on 04/11/2016.
